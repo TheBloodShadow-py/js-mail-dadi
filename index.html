@@ -5,7 +5,142 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>mail-dadi</title>
-    <script src="./js/main.js" async type="text/javascript"></script>
+    <script src="./js/email.js" async type="text/javascript"></script>
+    <script src="./js/dice-game.js" async type="text/javascript"></script>
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
-  <body></body>
+  <body class="bg-slate-700 text-white">
+    <main>
+      <div class="container my-0 mx-auto transition-all duration-300">
+        <section class="flex gap-10 items-center justify-center h-screen flex-col p-5">
+          <div class="flex flex-col items-center justify-center gap-4">
+            <h2 class="text-2xl">Check if you are a admin!</h2>
+            <input
+              class="p-2 rounded placeholder:capitalize placeholder:text-gray-500 text-gray-700"
+              type="email"
+              placeholder="email"
+              id="emailDomInput"
+            />
+            <button
+              id="emailDomQuery"
+              class="bg-slate-900 px-5 py-2 rounded hover:bg-stone-900 transition-colors duration-300"
+            >
+              Submit
+            </button>
+            <span id="domResult"></span>
+          </div>
+          <div class="flex flex-col items-start justify-center gap-4">
+            <h2 class="text-2xl self-center">Play dice game!</h2>
+            <div class="flex gap-10">
+              <div class="flex gap-3 items-center user">
+                <span>User: </span>
+                <div class="box box-one hidden">
+                  <div class="dot"></div>
+                </div>
+                <div class="box box-two hidden">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="box box-three hidden">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="box box-four hidden">
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                </div>
+                <div class="box box-five hidden">
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                </div>
+                <div class="box box-six hidden">
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 robot">
+                <span id="robotDom">Robot: </span>
+                <div class="box box-one hidden">
+                  <div class="dot"></div>
+                </div>
+                <div class="box box-two hidden">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="box box-three hidden">
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+                <div class="box box-four hidden">
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                </div>
+                <div class="box box-five hidden">
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                </div>
+                <div class="box box-six hidden">
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                  <div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button
+              id="playDomQuery"
+              class="bg-slate-900 px-5 py-2 rounded hover:bg-stone-900 transition-colors duration-300 self-center"
+            >
+              Play
+            </button>
+            <span id="diceDomResult" class="self-center"></span>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
 </html>

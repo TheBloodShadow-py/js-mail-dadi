@@ -1,0 +1,92 @@
+.box {
+  width: 60px;
+  height: 60px;
+  aspect-ratio: 1/1;
+  background-color: rgb(255, 255, 255);
+  border-radius: 5px;
+  padding: 4.5px;
+}
+
+.dot {
+  background-color: black;
+  width: 12px;
+  height: 12px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+}
+
+.box-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box-two {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-two .dot:nth-child(2) {
+  align-self: flex-end;
+}
+
+.box-three {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-three .dot:nth-child(2) {
+  align-self: center;
+}
+
+.box-three .dot:nth-child(3) {
+  align-self: flex-end;
+}
+
+.box-four {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.box-four > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-five {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  position: relative;
+}
+
+.box-five::after {
+  display: table;
+  content: "";
+  position: absolute;
+  background-color: black;
+  width: 12px;
+  height: 12px;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.box-five > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.box-six {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.box-six > div {
+  display: flex;
+  justify-content: space-between;
+}
