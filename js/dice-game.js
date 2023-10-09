@@ -18,8 +18,6 @@ function playDice() {
   const userDice = Math.floor(Math.random() * 6) + 1;
   const robotDice = Math.floor(Math.random() * 6) + 1;
 
-  console.log(userDice, robotDice);
-
   let tempDice;
 
   if (userDice === 1) {
