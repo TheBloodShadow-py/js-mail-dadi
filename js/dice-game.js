@@ -8,7 +8,6 @@ function resetDice() {
   let dices = document.querySelectorAll(".box");
 
   for (let i = 0; i < dices.length; i++) {
-    dices[i].classList.remove("hidden");
     dices[i].classList.add("hidden");
   }
   return;
@@ -17,7 +16,6 @@ function resetDice() {
 function playDice() {
   const userDice = Math.floor(Math.random() * 6) + 1;
   const robotDice = Math.floor(Math.random() * 6) + 1;
-
   let tempDice;
 
   if (userDice === 1) {
@@ -33,6 +31,7 @@ function playDice() {
   } else if (userDice === 6) {
     tempDice = document.querySelector(".user .box-six");
   }
+
   tempDice.classList.remove("hidden");
 
   if (robotDice === 1) {
@@ -48,6 +47,7 @@ function playDice() {
   } else if (robotDice === 6) {
     tempDice = document.querySelector(".robot .box-six");
   }
+
   tempDice.classList.remove("hidden");
 
   if (userDice > robotDice) {

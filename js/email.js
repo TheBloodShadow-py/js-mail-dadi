@@ -14,11 +14,9 @@ function checkEmail() {
     return;
   }
 
-  for (let i = 0; i < adminEmails.length; i++) {
-    if (emailInput === adminEmails[i]) {
-      domResult.innerHTML = "Welcome back admin!";
-      return;
-    }
+  if (adminEmails.includes(emailInput)) {
+    domResult.innerHTML = "Welcome back admin!";
+  } else {
     domResult.innerHTML = "You're not an admin.";
   }
   return;
